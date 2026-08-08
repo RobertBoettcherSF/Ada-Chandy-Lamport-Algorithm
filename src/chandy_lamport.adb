@@ -17,9 +17,9 @@ package body Chandy_Lamport is
       end loop;
    end Init_Node;
 
-   procedure Update_Local_State (N : in out Node; Delta : Integer) is
+   procedure Update_Local_State (N : in out Node; Value_Change : Integer) is
    begin
-      N.Current_Value := N.Current_Value + Delta;
+      N.Current_Value := N.Current_Value + Value_Change;
    end Update_Local_State;
 
    procedure Initiate_Snapshot (N : in out Node; S_ID : Snapshot_ID; Out_Markers : out Message_Queue) is

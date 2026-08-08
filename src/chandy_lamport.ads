@@ -57,7 +57,7 @@ package Chandy_Lamport is
    procedure Init_Node (N : out Node; ID : Node_ID; Initial_Value : Integer);
 
    -- Simulates normal application event (e.g., processing a transaction)
-   procedure Update_Local_State (N : in out Node; Delta : Integer);
+   procedure Update_Local_State (N : in out Node; Value_Change : Integer);
 
    -- Initiates a new snapshot (Variant 1: Single Initiator / Variant 2: Concurrent Multi-Initiator)
    procedure Initiate_Snapshot (N : in out Node; S_ID : Snapshot_ID; Out_Markers : out Message_Queue);
