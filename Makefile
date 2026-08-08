@@ -12,7 +12,7 @@ $(BIN_DIR)/main: $(SRC_DIR)/main.adb $(SRC_DIR)/chandy_lamport.adb
 	mkdir -p $(OBJ_DIR) $(BIN_DIR)
 	$(GNAT) -P $(GPR_FILE)
 
-$(BIN_DIR)/tests: tests.adb $(SRC_DIR)/chandy_lamport.adb
+$(BIN_DIR)/tests: $(SRC_DIR)/tests.adb $(SRC_DIR)/chandy_lamport.adb
 	mkdir -p $(OBJ_DIR) $(BIN_DIR)
 	$(GNAT) -P $(GPR_FILE)
 
